@@ -1,0 +1,37 @@
+<h1 style="text-align:center;">Current Orders</h1>
+<div class="row">
+  <div class="col-xs-6">
+    <h1 style="text-align:center;">Bids!</h1>
+  <table class="table">
+    <thead>
+      <th>Orders</th>
+      <th>Amount (<i class="fa fa-btc" aria-hidden="true"></i>)</th>
+      <th>Price (원 Korean Won)</th>
+    </thead>
+    <tbody class="currentBids">
+      <tr bgcolor="#99ff99" ng-repeat="current in bids">
+        <td>{{current[2]}}</td>
+        <td>{{current[1]}}</td>
+        <td>{{current[0] | currency:"&#8361;":0}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+<div class="col-xs-6">
+<h1 style="text-align:center;">Asks!</h1>
+<table class="table">
+  <thead>
+    <th>Price(원 Korean Won)</th>
+    <th>Amount (<i class="fa fa-btc" aria-hidden="true"></i>)</th>
+    <th>Orders</th>
+  </thead>
+  <tbody class="currentAsks">
+    <tr bgcolor="#f6a2b3" ng-repeat="current in asks">
+      <td>{{current[0] | currency:"&#8361;":0}}</td>
+      <td>{{current[1]}}</td>
+      <td>{{current[2]}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>

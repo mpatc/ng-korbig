@@ -1,0 +1,32 @@
+<div class="container-fluid">
+<h1 style="text-align:center;">Recent Transactions</h1>
+<h2 style="text-align:center;">on the Korbit  Exchange</h2>
+
+<div class="row">
+  <div class="col-md 12">
+<table class="table"> <h1 style="text-align:center;">Recents!</h1>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Transaction ID</th>
+      <th>Price</th>
+      <th>Amount (<i class="fa fa-btc" aria-hidden="true"></i>)</th>
+    </tr>
+  </thead>
+  <tbody class='transList'>
+    <tr ng-repeat='order in orders' ui-sref='detail({ name: person.name })'>
+      <td>{{order.timestamp | date: 'medium'}}</td>
+      <td>{{order.tid}}</td>
+      <td bgcolor="gold" >{{order.price  | currency:"&#8361;":0}}</td>
+      <td>{{order.amount}}</td>
+
+</table>
+</div></div></div>
+
+<!--
+<ul>
+  <li ng-repeat='person in people' ng-click='goToPerson(person)'>
+    {{person.name}} - {{person.job}}
+  </li>
+</ul>
+ -->

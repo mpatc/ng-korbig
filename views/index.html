@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/spacelab.css">
+    <link rel="stylesheet" href="/bower_components/angular-chart.js/dist/angular-chart.css">
+
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+    <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="/bower_components/angular-chart.js/angular-chart.js"></script>
+
+    <script src="/js/module.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script src="/js/services.js"></script>
+</head>
+
+<body ng-app='routerApp'>
+  <div class="container-fluid">
+    <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+                <a class="navbar-brand" href="#"><img height="42" width="42" src="korid.jpg" alt="Brand"></img></a>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="http://korbit.co.kr">Link <span class="sr-only">(current)</span></a></li>
+                        <li><a href="http://korbit.co.kr">Korbit Exchange</a></li>
+                        <li><a ui-sref='recent'>Korbit Recent Data</a></li>
+                        <li><a ui-sref='current'>Korbit Current Data</a></li>
+                        <li><a ui-sref='chartnow'>Korbit Current Charts</a></li>
+                        <li><a ui-sref='chartpast'>Korbit Past Charts</a></li>
+                    </ul>
+    </nav>
+    </div>
+  </div>
+    <!-- /.navbar-collapse -->
+  </div>
+    <ui-view></ui-view>
+    <!-- /.container-fluid -->
+
+
+    <!-- Where the templates go! -->
+    <ui-view></ui-view>
+    <!--  -->
+<div>
+</body>
+
+</html>
